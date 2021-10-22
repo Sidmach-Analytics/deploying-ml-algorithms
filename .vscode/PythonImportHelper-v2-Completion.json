@@ -1,0 +1,574 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "management",
+        "importPath": "django.core",
+        "description": "django.core",
+        "isExtraImport": true,
+        "detail": "django.core",
+        "documentation": {}
+    },
+    {
+        "label": "glob",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "glob",
+        "description": "glob",
+        "detail": "glob",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "distutils.sysconfig",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "distutils.sysconfig",
+        "description": "distutils.sysconfig",
+        "detail": "distutils.sysconfig",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": ".ml.Scripts.activate_this",
+        "description": ".ml.Scripts.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
+        "detail": ".ml.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": ".ml.Scripts.activate_this",
+        "description": ".ml.Scripts.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]",
+        "detail": ".ml.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": ".ml.Scripts.activate_this",
+        "description": ".ml.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".ml.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": ".ml.Scripts.activate_this",
+        "description": ".ml.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".ml.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": ".ml.Scripts.activate_this",
+        "description": ".ml.Scripts.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".ml.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": ".ml.Scripts.activate_this",
+        "description": ".ml.Scripts.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".ml.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": ".ml.Scripts.activate_this",
+        "description": ".ml.Scripts.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".ml.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": ".ml.Scripts.activate_this",
+        "description": ".ml.Scripts.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": ".ml.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "Tee",
+        "kind": 6,
+        "importPath": ".ml.Scripts.pywin32_postinstall",
+        "description": ".ml.Scripts.pywin32_postinstall",
+        "peekOfCode": "class Tee:\n    def __init__(self, file):\n        self.f = file\n    def write(self, what):\n        if self.f is not None:\n            try:\n                self.f.write(what.replace(\"\\n\", \"\\r\\n\"))\n            except IOError:\n                pass\n        tee_f.write(what)",
+        "detail": ".ml.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "CopyTo",
+        "kind": 2,
+        "importPath": ".ml.Scripts.pywin32_postinstall",
+        "description": ".ml.Scripts.pywin32_postinstall",
+        "peekOfCode": "def CopyTo(desc, src, dest):\n    import win32api, win32con\n    while 1:\n        try:\n            win32api.CopyFile(src, dest, 0)\n            return\n        except win32api.error as details:\n            if details.winerror==5: # access denied - user not admin.\n                raise\n            if silent:",
+        "detail": ".ml.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "LoadSystemModule",
+        "kind": 2,
+        "importPath": ".ml.Scripts.pywin32_postinstall",
+        "description": ".ml.Scripts.pywin32_postinstall",
+        "peekOfCode": "def LoadSystemModule(lib_dir, modname):\n    # See if this is a debug build.\n    import importlib.util, importlib.machinery\n    suffix = '_d' if '_d.pyd' in importlib.machinery.EXTENSION_SUFFIXES else ''\n    filename = \"%s%d%d%s.dll\" % \\\n               (modname, sys.version_info[0], sys.version_info[1], suffix)\n    filename = os.path.join(lib_dir, \"pywin32_system32\", filename)\n    loader = importlib.machinery.ExtensionFileLoader(modname, filename)\n    spec = importlib.machinery.ModuleSpec(name=modname, loader=loader, origin=filename)\n    mod = importlib.util.module_from_spec(spec)",
+        "detail": ".ml.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "SetPyKeyVal",
+        "kind": 2,
+        "importPath": ".ml.Scripts.pywin32_postinstall",
+        "description": ".ml.Scripts.pywin32_postinstall",
+        "peekOfCode": "def SetPyKeyVal(key_name, value_name, value):\n    root_hkey = get_root_hkey()\n    root_key = winreg.OpenKey(root_hkey, root_key_name)\n    try:\n        my_key = winreg.CreateKey(root_key, key_name)\n        try:\n            winreg.SetValueEx(my_key, value_name, 0, winreg.REG_SZ, value)\n        finally:\n            my_key.Close()\n    finally:",
+        "detail": ".ml.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterCOMObjects",
+        "kind": 2,
+        "importPath": ".ml.Scripts.pywin32_postinstall",
+        "description": ".ml.Scripts.pywin32_postinstall",
+        "peekOfCode": "def RegisterCOMObjects(register = 1):\n    import win32com.server.register\n    if register:\n        func = win32com.server.register.RegisterClasses\n    else:\n        func = win32com.server.register.UnregisterClasses\n    flags = {}\n    if not verbose:\n        flags['quiet']=1\n    for module, klass_name in com_modules:",
+        "detail": ".ml.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterPythonwin",
+        "kind": 2,
+        "importPath": ".ml.Scripts.pywin32_postinstall",
+        "description": ".ml.Scripts.pywin32_postinstall",
+        "peekOfCode": "def RegisterPythonwin(register=True):\n    \"\"\" Add (or remove) Pythonwin to context menu for python scripts.\n        ??? Should probably also add Edit command for pys files also.\n        Also need to remove these keys on uninstall, but there's no function\n            like file_created to add registry entries to uninstall log ???\n    \"\"\"\n    import os\n    lib_dir = distutils.sysconfig.get_python_lib(plat_specific=1)\n    classes_root=get_root_hkey()\n    ## Installer executable doesn't seem to pass anything to postinstall script indicating if it's a debug build,",
+        "detail": ".ml.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "get_shortcuts_folder",
+        "kind": 2,
+        "importPath": ".ml.Scripts.pywin32_postinstall",
+        "description": ".ml.Scripts.pywin32_postinstall",
+        "peekOfCode": "def get_shortcuts_folder():\n    if get_root_hkey()==winreg.HKEY_LOCAL_MACHINE:\n        try:\n            fldr = get_special_folder_path(\"CSIDL_COMMON_PROGRAMS\")\n        except OSError:\n            # No CSIDL_COMMON_PROGRAMS on this platform\n            fldr = get_special_folder_path(\"CSIDL_PROGRAMS\")\n    else:\n        # non-admin install - always goes in this user's start menu.\n        fldr = get_special_folder_path(\"CSIDL_PROGRAMS\")",
+        "detail": ".ml.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "get_system_dir",
+        "kind": 2,
+        "importPath": ".ml.Scripts.pywin32_postinstall",
+        "description": ".ml.Scripts.pywin32_postinstall",
+        "peekOfCode": "def get_system_dir():\n    import win32api # we assume this exists.\n    try:\n        import pythoncom\n        import win32process\n        from win32com.shell import shell, shellcon\n        try:\n            if win32process.IsWow64Process():\n                return shell.SHGetSpecialFolderPath(0,shellcon.CSIDL_SYSTEMX86)\n            return shell.SHGetSpecialFolderPath(0,shellcon.CSIDL_SYSTEM)",
+        "detail": ".ml.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "fixup_dbi",
+        "kind": 2,
+        "importPath": ".ml.Scripts.pywin32_postinstall",
+        "description": ".ml.Scripts.pywin32_postinstall",
+        "peekOfCode": "def fixup_dbi():\n    # We used to have a dbi.pyd with our .pyd files, but now have a .py file.\n    # If the user didn't uninstall, they will find the .pyd which will cause\n    # problems - so handle that.\n    import win32api, win32con\n    pyd_name = os.path.join(os.path.dirname(win32api.__file__), \"dbi.pyd\")\n    pyd_d_name = os.path.join(os.path.dirname(win32api.__file__), \"dbi_d.pyd\")\n    py_name = os.path.join(os.path.dirname(win32con.__file__), \"dbi.py\")\n    for this_pyd in (pyd_name, pyd_d_name):\n        this_dest = this_pyd + \".old\"",
+        "detail": ".ml.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "install",
+        "kind": 2,
+        "importPath": ".ml.Scripts.pywin32_postinstall",
+        "description": ".ml.Scripts.pywin32_postinstall",
+        "peekOfCode": "def install(lib_dir):\n    import traceback\n    # The .pth file is now installed as a regular file.\n    # Create the .pth file in the site-packages dir, and use only relative paths\n    # We used to write a .pth directly to sys.prefix - clobber it.\n    if os.path.isfile(os.path.join(sys.prefix, \"pywin32.pth\")):\n        os.unlink(os.path.join(sys.prefix, \"pywin32.pth\"))\n    # The .pth may be new and therefore not loaded in this session.\n    # Setup the paths just in case.\n    for name in \"win32 win32\\\\lib Pythonwin\".split():",
+        "detail": ".ml.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "uninstall",
+        "kind": 2,
+        "importPath": ".ml.Scripts.pywin32_postinstall",
+        "description": ".ml.Scripts.pywin32_postinstall",
+        "peekOfCode": "def uninstall(lib_dir):\n    # First ensure our system modules are loaded from pywin32_system, so\n    # we can remove the ones we copied...\n    LoadSystemModule(lib_dir, \"pywintypes\")\n    LoadSystemModule(lib_dir, \"pythoncom\")\n    try:\n        RegisterCOMObjects(False)\n    except Exception as why:\n        print(\"Failed to unregister COM objects: %s\" % (why,))\n    try:",
+        "detail": ".ml.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "verify_destination",
+        "kind": 2,
+        "importPath": ".ml.Scripts.pywin32_postinstall",
+        "description": ".ml.Scripts.pywin32_postinstall",
+        "peekOfCode": "def verify_destination(location):\n    if not os.path.isdir(location):\n        raise argparse.ArgumentTypeError(\"Path \\\"{}\\\" does not exist!\".format(location))\n    return location\nif __name__ == '__main__':\n    import argparse\n    parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter,\n                                     description=\"\"\"A post-install script for the pywin32 extensions.\n    * Typical usage:\n    > python pywin32_postinstall.py -install",
+        "detail": ".ml.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "tee_f",
+        "kind": 5,
+        "importPath": ".ml.Scripts.pywin32_postinstall",
+        "description": ".ml.Scripts.pywin32_postinstall",
+        "peekOfCode": "tee_f = open(os.path.join(tempfile.gettempdir(), 'pywin32_postinstall.log'), \"w\")\nclass Tee:\n    def __init__(self, file):\n        self.f = file\n    def write(self, what):\n        if self.f is not None:\n            try:\n                self.f.write(what.replace(\"\\n\", \"\\r\\n\"))\n            except IOError:\n                pass",
+        "detail": ".ml.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "sys.stderr",
+        "kind": 5,
+        "importPath": ".ml.Scripts.pywin32_postinstall",
+        "description": ".ml.Scripts.pywin32_postinstall",
+        "peekOfCode": "sys.stderr = Tee(sys.stderr)\nsys.stdout = Tee(sys.stdout)\ncom_modules = [\n    # module_name,                      class_names\n    (\"win32com.servers.interp\",         \"Interpreter\"),\n    (\"win32com.servers.dictionary\",     \"DictionaryPolicy\"),\n    (\"win32com.axscript.client.pyscript\",\"PyScript\"),\n]\n# Is this a 'silent' install - ie, avoid all dialogs.\n# Different than 'verbose'",
+        "detail": ".ml.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "sys.stdout",
+        "kind": 5,
+        "importPath": ".ml.Scripts.pywin32_postinstall",
+        "description": ".ml.Scripts.pywin32_postinstall",
+        "peekOfCode": "sys.stdout = Tee(sys.stdout)\ncom_modules = [\n    # module_name,                      class_names\n    (\"win32com.servers.interp\",         \"Interpreter\"),\n    (\"win32com.servers.dictionary\",     \"DictionaryPolicy\"),\n    (\"win32com.axscript.client.pyscript\",\"PyScript\"),\n]\n# Is this a 'silent' install - ie, avoid all dialogs.\n# Different than 'verbose'\nsilent = 0",
+        "detail": ".ml.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "com_modules",
+        "kind": 5,
+        "importPath": ".ml.Scripts.pywin32_postinstall",
+        "description": ".ml.Scripts.pywin32_postinstall",
+        "peekOfCode": "com_modules = [\n    # module_name,                      class_names\n    (\"win32com.servers.interp\",         \"Interpreter\"),\n    (\"win32com.servers.dictionary\",     \"DictionaryPolicy\"),\n    (\"win32com.axscript.client.pyscript\",\"PyScript\"),\n]\n# Is this a 'silent' install - ie, avoid all dialogs.\n# Different than 'verbose'\nsilent = 0\n# Verbosity of output messages.",
+        "detail": ".ml.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "silent",
+        "kind": 5,
+        "importPath": ".ml.Scripts.pywin32_postinstall",
+        "description": ".ml.Scripts.pywin32_postinstall",
+        "peekOfCode": "silent = 0\n# Verbosity of output messages.\nverbose = 1\nroot_key_name = \"Software\\\\Python\\\\PythonCore\\\\\" + sys.winver\ntry:\n    # When this script is run from inside the bdist_wininst installer,\n    # file_created() and directory_created() are additional builtin\n    # functions which write lines to Python23\\pywin32-install.log. This is\n    # a list of actions for the uninstaller, the format is inspired by what\n    # the Wise installer also creates.",
+        "detail": ".ml.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "verbose",
+        "kind": 5,
+        "importPath": ".ml.Scripts.pywin32_postinstall",
+        "description": ".ml.Scripts.pywin32_postinstall",
+        "peekOfCode": "verbose = 1\nroot_key_name = \"Software\\\\Python\\\\PythonCore\\\\\" + sys.winver\ntry:\n    # When this script is run from inside the bdist_wininst installer,\n    # file_created() and directory_created() are additional builtin\n    # functions which write lines to Python23\\pywin32-install.log. This is\n    # a list of actions for the uninstaller, the format is inspired by what\n    # the Wise installer also creates.\n    file_created\n    is_bdist_wininst = True",
+        "detail": ".ml.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "root_key_name",
+        "kind": 5,
+        "importPath": ".ml.Scripts.pywin32_postinstall",
+        "description": ".ml.Scripts.pywin32_postinstall",
+        "peekOfCode": "root_key_name = \"Software\\\\Python\\\\PythonCore\\\\\" + sys.winver\ntry:\n    # When this script is run from inside the bdist_wininst installer,\n    # file_created() and directory_created() are additional builtin\n    # functions which write lines to Python23\\pywin32-install.log. This is\n    # a list of actions for the uninstaller, the format is inspired by what\n    # the Wise installer also creates.\n    file_created\n    is_bdist_wininst = True\nexcept NameError:",
+        "detail": ".ml.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "run_test",
+        "kind": 2,
+        "importPath": ".ml.Scripts.pywin32_testall",
+        "description": ".ml.Scripts.pywin32_testall",
+        "peekOfCode": "def run_test(script, cmdline_rest=\"\"):\n    dirname, scriptname = os.path.split(script)\n    # some tests prefer to be run from their directory.\n    cmd = [sys.executable, \"-u\", scriptname] + cmdline_rest.split()\n    print(script)\n    popen = subprocess.Popen(cmd, shell=True, cwd=dirname,\n                             stdout=subprocess.PIPE, stderr=subprocess.STDOUT)\n    data = popen.communicate()[0]\n    if sys.version_info > (3,):\n        sys.stdout.write(data.decode('latin-1'))",
+        "detail": ".ml.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "find_and_run",
+        "kind": 2,
+        "importPath": ".ml.Scripts.pywin32_testall",
+        "description": ".ml.Scripts.pywin32_testall",
+        "peekOfCode": "def find_and_run(possible_locations, script, cmdline_rest=\"\"):\n    for maybe in possible_locations:\n        if os.path.isfile(os.path.join(maybe, script)):\n            run_test(os.path.abspath(os.path.join(maybe, script)), cmdline_rest)\n            break\n    else:\n        raise RuntimeError(\"Failed to locate the test script '%s' in one of %s\"\n                           % (script, possible_locations))\nif __name__ == '__main__':\n    import argparse",
+        "detail": ".ml.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "this_dir",
+        "kind": 5,
+        "importPath": ".ml.Scripts.pywin32_testall",
+        "description": ".ml.Scripts.pywin32_testall",
+        "peekOfCode": "this_dir = os.path.dirname(__file__)\nsite_packages = [site.getusersitepackages(), ] + site.getsitepackages()\n# Run a test using subprocess and wait for the result.\n# If we get an returncode != 0, we know that there was an error.\ndef run_test(script, cmdline_rest=\"\"):\n    dirname, scriptname = os.path.split(script)\n    # some tests prefer to be run from their directory.\n    cmd = [sys.executable, \"-u\", scriptname] + cmdline_rest.split()\n    print(script)\n    popen = subprocess.Popen(cmd, shell=True, cwd=dirname,",
+        "detail": ".ml.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "site_packages",
+        "kind": 5,
+        "importPath": ".ml.Scripts.pywin32_testall",
+        "description": ".ml.Scripts.pywin32_testall",
+        "peekOfCode": "site_packages = [site.getusersitepackages(), ] + site.getsitepackages()\n# Run a test using subprocess and wait for the result.\n# If we get an returncode != 0, we know that there was an error.\ndef run_test(script, cmdline_rest=\"\"):\n    dirname, scriptname = os.path.split(script)\n    # some tests prefer to be run from their directory.\n    cmd = [sys.executable, \"-u\", scriptname] + cmdline_rest.split()\n    print(script)\n    popen = subprocess.Popen(cmd, shell=True, cwd=dirname,\n                             stdout=subprocess.PIPE, stderr=subprocess.STDOUT)",
+        "detail": ".ml.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "backend.server.server.settings",
+        "description": "backend.server.server.settings",
+        "peekOfCode": "BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'o#2t36877rgbqgq3=wor))bu-)o5(jq0b1w&eh7n6i9-^inzua'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
+        "detail": "backend.server.server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "backend.server.server.settings",
+        "description": "backend.server.server.settings",
+        "peekOfCode": "SECRET_KEY = 'o#2t36877rgbqgq3=wor))bu-)o5(jq0b1w&eh7n6i9-^inzua'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "backend.server.server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "backend.server.server.settings",
+        "description": "backend.server.server.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "backend.server.server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "backend.server.server.settings",
+        "description": "backend.server.server.settings",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]",
+        "detail": "backend.server.server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "backend.server.server.settings",
+        "description": "backend.server.server.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]\nMIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',",
+        "detail": "backend.server.server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "backend.server.server.settings",
+        "description": "backend.server.server.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'server.urls'",
+        "detail": "backend.server.server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "backend.server.server.settings",
+        "description": "backend.server.server.settings",
+        "peekOfCode": "ROOT_URLCONF = 'server.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "detail": "backend.server.server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "backend.server.server.settings",
+        "description": "backend.server.server.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "backend.server.server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "backend.server.server.settings",
+        "description": "backend.server.server.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'server.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/2.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),\n    }\n}\n# Password validation",
+        "detail": "backend.server.server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "backend.server.server.settings",
+        "description": "backend.server.server.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "detail": "backend.server.server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "backend.server.server.settings",
+        "description": "backend.server.server.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "backend.server.server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "backend.server.server.settings",
+        "description": "backend.server.server.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/2.2/howto/static-files/\nSTATIC_URL = '/static/'",
+        "detail": "backend.server.server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "backend.server.server.settings",
+        "description": "backend.server.server.settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/2.2/howto/static-files/\nSTATIC_URL = '/static/'",
+        "detail": "backend.server.server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "backend.server.server.settings",
+        "description": "backend.server.server.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/2.2/howto/static-files/\nSTATIC_URL = '/static/'",
+        "detail": "backend.server.server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_L10N",
+        "kind": 5,
+        "importPath": "backend.server.server.settings",
+        "description": "backend.server.server.settings",
+        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/2.2/howto/static-files/\nSTATIC_URL = '/static/'",
+        "detail": "backend.server.server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "backend.server.server.settings",
+        "description": "backend.server.server.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/2.2/howto/static-files/\nSTATIC_URL = '/static/'",
+        "detail": "backend.server.server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "backend.server.server.settings",
+        "description": "backend.server.server.settings",
+        "peekOfCode": "STATIC_URL = '/static/'",
+        "detail": "backend.server.server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "backend.server.server.urls",
+        "description": "backend.server.server.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n]",
+        "detail": "backend.server.server.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "backend.server.server.wsgi",
+        "description": "backend.server.server.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "backend.server.server.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "backend.server.manage",
+        "description": "backend.server.manage",
+        "peekOfCode": "def main():\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'server.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"\n        ) from exc",
+        "detail": "backend.server.manage",
+        "documentation": {}
+    }
+]
