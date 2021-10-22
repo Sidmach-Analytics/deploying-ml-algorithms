@@ -89,6 +89,39 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
         "label": "admin",
         "importPath": "django.contrib",
         "description": "django.contrib",
@@ -110,14 +143,6 @@
         "description": "django.apps",
         "isExtraImport": true,
         "detail": "django.apps",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
         "documentation": {}
     },
     {
@@ -432,12 +457,57 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "backend.server.apps.endpoints.migrations.0001_initial",
+        "description": "backend.server.apps.endpoints.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Endpoint',\n            fields=[\n                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(max_length=128)),",
+        "detail": "backend.server.apps.endpoints.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
         "label": "EndpointsConfig",
         "kind": 6,
-        "importPath": "backend.server.endpoints.apps",
-        "description": "backend.server.endpoints.apps",
+        "importPath": "backend.server.apps.endpoints.apps",
+        "description": "backend.server.apps.endpoints.apps",
         "peekOfCode": "class EndpointsConfig(AppConfig):\n    name = 'endpoints'",
-        "detail": "backend.server.endpoints.apps",
+        "detail": "backend.server.apps.endpoints.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Endpoint",
+        "kind": 6,
+        "importPath": "backend.server.apps.endpoints.models",
+        "description": "backend.server.apps.endpoints.models",
+        "peekOfCode": "class Endpoint(models.Model):\n    '''\n    The Endpoint object represents ML API endpoint.\n    Attributes:\n        name: The name of the endpoint, it will be used in API URL,\n        owner: The string with owner name,\n        created_at: The date when endpoint was created.\n    '''\n    name = models.CharField(max_length=128)\n    owner = models.CharField(max_length=128)",
+        "detail": "backend.server.apps.endpoints.models",
+        "documentation": {}
+    },
+    {
+        "label": "MLAlgorithm",
+        "kind": 6,
+        "importPath": "backend.server.apps.endpoints.models",
+        "description": "backend.server.apps.endpoints.models",
+        "peekOfCode": "class MLAlgorithm(models.Model):\n    '''\n    The MLAlgorithm represent the ML algorithm object.\n    Attributes:\n        name: The name of the algorithm.\n        description: The short description of how the algorithm works.\n        code: The code of the algorithm.\n        version: The version of the algorithm similar to software versioning.\n        owner: The name of the owner.\n        created_at: The date when MLAlgorithm was added.",
+        "detail": "backend.server.apps.endpoints.models",
+        "documentation": {}
+    },
+    {
+        "label": "MLAlgorithmStatus",
+        "kind": 6,
+        "importPath": "backend.server.apps.endpoints.models",
+        "description": "backend.server.apps.endpoints.models",
+        "peekOfCode": "class MLAlgorithmStatus(models.Model):\n    '''\n    The MLAlgorithmStatus represent status of the MLAlgorithm which can change during the time.\n    Attributes:\n        status: The status of algorithm in the endpoint. Can be: testing, staging, production, ab_testing.\n        active: The boolean flag which point to currently active status.\n        created_by: The name of creator.\n        created_at: The date of status creation.\n        parent_mlalgorithm: The reference to corresponding MLAlgorithm.\n    '''",
+        "detail": "backend.server.apps.endpoints.models",
+        "documentation": {}
+    },
+    {
+        "label": "MLRequest",
+        "kind": 6,
+        "importPath": "backend.server.apps.endpoints.models",
+        "description": "backend.server.apps.endpoints.models",
+        "peekOfCode": "class MLRequest(models.Model):\n    '''\n    The MLRequest will keep information about all requests to ML algorithms.\n    Attributes:\n        input_data: The input data to ML algorithm in JSON format.\n        full_response: The response of the ML algorithm.\n        response: The response of the ML algorithm in JSON format.\n        feedback: The feedback about the response in JSON format.\n        created_at: The date when request was created.\n        parent_mlalgorithm: The reference to MLAlgorithm used to compute response.",
+        "detail": "backend.server.apps.endpoints.models",
         "documentation": {}
     },
     {
@@ -472,7 +542,7 @@
         "kind": 5,
         "importPath": "backend.server.server.settings",
         "description": "backend.server.server.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    # interna app",
         "detail": "backend.server.server.settings",
         "documentation": {}
     },
@@ -481,7 +551,7 @@
         "kind": 5,
         "importPath": "backend.server.server.settings",
         "description": "backend.server.server.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]\nMIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    # interna app\n    'apps.endpoints',\n]",
         "detail": "backend.server.server.settings",
         "documentation": {}
     },
