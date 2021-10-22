@@ -97,6 +97,46 @@
         "documentation": {}
     },
     {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
         "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -389,6 +429,15 @@
         "description": ".ml.Scripts.pywin32_testall",
         "peekOfCode": "site_packages = [site.getusersitepackages(), ] + site.getsitepackages()\n# Run a test using subprocess and wait for the result.\n# If we get an returncode != 0, we know that there was an error.\ndef run_test(script, cmdline_rest=\"\"):\n    dirname, scriptname = os.path.split(script)\n    # some tests prefer to be run from their directory.\n    cmd = [sys.executable, \"-u\", scriptname] + cmdline_rest.split()\n    print(script)\n    popen = subprocess.Popen(cmd, shell=True, cwd=dirname,\n                             stdout=subprocess.PIPE, stderr=subprocess.STDOUT)",
         "detail": ".ml.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "EndpointsConfig",
+        "kind": 6,
+        "importPath": "backend.server.endpoints.apps",
+        "description": "backend.server.endpoints.apps",
+        "peekOfCode": "class EndpointsConfig(AppConfig):\n    name = 'endpoints'",
+        "detail": "backend.server.endpoints.apps",
         "documentation": {}
     },
     {
